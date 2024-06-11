@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>İletişim</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #45086d;
+            color: white;
+            padding: 10px 20px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="hakkinda.html">Hakkında</a></li>
+                <li><a href="servisler.html">Servisler</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>İletişim</h2>
+        <p>Bize ulaşmak için aşağıdaki bilgileri kullanabilirsiniz:</p>
+        <ul>
+            <li>Adres: Konyaaltı/Antalya</li>
+            <li>Telefon: +90 123 456 7890</li>
+            <li>Email: flower@site.com</li>
+        </ul>
+        <form action="#" method="post">
+            <label for="name">Adınız:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="message">Mesajınız:</label><br>
+            <textarea id="message" name="message" rows="6" cols="40" required></textarea><br><br>
+            <input type="submit" value="Gönder">
+        </form>
+    </section>
+</body>
+</html>
