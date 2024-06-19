@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://yt3.googleusercontent.com/ytc/AIdro_luiQFcr4sX3xMwEo-DNLxWX4u_TxRohatuButJe6PIpA=s900-c-k-c0x00ffffff-no-rj');
+    background-size: 100% auto;
+    background-position: left top;
+    background-attachment: fixed; 
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.5);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+nav {
+    text-align: right;
+}
+
+nav ul {
+    background-color: rgba(51, 51, 51, 0.5);
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: darkred;
+}
+
+main {
+    padding: 20px;
+}
+
+div {
+    margin-bottom: 40px;
+    color: darkgray;
+}
+
+div#home {
+    text-align: center;
+}
+
+div#home img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+div#home blockquote {
+    color: darkgrey;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+div#info, div#books {
+    background-color: rgba(67, 67, 67, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+footer {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
