@@ -1,0 +1,35 @@
+body {
+    background-color: rgb(183, 172, 157);
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+form {
+    background-color: rgb(191, 103, 103);
+    border-radius: 5%;
+    padding: 35px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+
+label, input, select, textarea {
+    display: block;
+    margin-bottom: 10px;
+}
+input[type="submit"] {
+    background-color: #656865;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #814949;
+}
+
+h1{
+    text-align: center;
+}

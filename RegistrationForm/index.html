@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Survey Form</title>
+</head>
+<body>
+
+<h1 id="title">Survey Form</h1>
+
+<form id="survey-form">
+
+    <label for="name" id="name-label">Fullname:
+        <input type="text" id="name" placeholder="" required>
+    </label>
+
+    <label for="email" id="email-label">Mail:
+        <input type="email" id="email" placeholder="" required>
+    </label>
+
+    <label for="number" id="number-label">Age:
+        <input type="number" id="number" placeholder="" min="18" max="100" required>
+    </label>
+
+    <select id="dropdown">
+        <option value="" disabled selected>Select Gender</option>
+        <option value="option1">Female</option>
+        <option value="option2">Male</option>
+    </select>
+
+    <fieldset>
+        <legend>Where Did You Here Us?</legend>
+        <label>
+            <input type="radio" name="radio-group" value="Instagram"> Instagram
+        </label>
+        <label>
+            <input type="radio" name="radio-group" value="LinkedIn"> LinkedIn
+        </label>
+    </fieldset>
+
+    <label>
+        <input type="checkbox" value="checkbox1"> Terms Of Service
+    </label>
+    <label>
+        <input type="checkbox" value="checkbox2"> Subscribe For News
+    </label>
+
+    <textarea placeholder="Suggestions"></textarea>
+
+    <input type="submit" id="submit" value="Sign Up">
+
+</form>
+
+</body>
+</html>
