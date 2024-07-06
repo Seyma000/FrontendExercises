@@ -2,4 +2,4 @@
 
 Projenin canlı önizlemesini aşağıdaki bağlantıya tıklayarak görebilirsiniz:
 
-[Review Page Canlı Önizleme](reviewpagee.netlify.app/)
+[Review Page Canlı Önizleme](https://reviewpagee.netlify.app/)
