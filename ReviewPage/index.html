@@ -1,91 +1,305 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Review Page</title>
+    <title>İnceleme Sayfası</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  
 </head>
-<body class="bg-gray-200 flex flex-col min-h-screen">
-    <header class="bg-purple-900">
-        <div class="container px-5 py-4">
-            <div class="flex justify-between items-center">
-                <div class="text-lg">
-                    <a href="#">Brand</a>
-                </div>
-                <div class="flex">
-                    <a href="index.html" class="text-blue-300 hover:text-white hover:underline px-3">Home</a>
-                    <a href="#" class="text-blue-300 hover:text-white hover:underline px-3">About</a>
-                    <a href="#" class="text-blue-300 hover:text-white hover:underline px-3">Services</a>
-                    <a href="#" class="text-blue-300 hover:text-white hover:underline px-3">Contact</a>
-                </div>
-            </div>
+<body class="bg-gray-200">
+
+    <!-- Üst Menü -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex items-center justify-between h-16">
+  
+              <!-- Logo ve Ana Menü -->
+              <div class="flex items-center">
+  
+                  <!-- Logo -->
+                  <div class="flex-shrink-0">
+                      <img class="h-8 w-8" src="https://tailwindui.com/img/logos/workflow-mark-purple-600.svg" alt="Logo">
+                  </div>
+  
+                  <!-- Ana Menü (Tablet ve Üstü) -->
+                  <div class="hidden md:block ml-10 flex items-baseline space-x-4">
+                      <a href="#" class="border-b-2 hover:border-purple-500 hover:text-purple-400 text-gray-800 px-3 py-2 rounded-md text-sm font-medium relative">Home</a>
+                      <a href="#" class="border-b-2 hover:border-purple-500 hover:text-purple-400 text-gray-800 px-3 py-2 rounded-md text-sm font-medium relative">About</a>
+                      <a href="#" class="border-b-2 hover:border-purple-500 hover:text-purple-400 text-gray-800 px-3 py-2 rounded-md text-sm font-medium relative">Services</a>
+                      <a href="#" class="border-b-2 hover:border-purple-500 hover:text-purple-400 text-gray-800 px-3 py-2 rounded-md text-sm font-medium relative">Contact</a>
+                  </div>
+  
+                  <!-- Menü (Mobil) -->
+                  <div class="md:hidden ml-2">
+                      <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+                          <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                          </svg>
+                      </button>
+                  </div>
+              </div>
+  
+              <!-- Arama ve Giriş -->
+              <div class="flex items-center">
+  
+                  <!-- Arama Kutusu (Tablet ve Üstü) -->
+                  <div class="relative hidden md:block">
+                      <input type="text" class="px-3 py-2 text-xs border border-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 pl-10" placeholder="Search...">
+                      <div class="absolute inset-y-0 pl-3 flex items-center">
+                          <i class="fas fa-search text-purple-400"></i>
+                      </div>
+                  </div>
+  
+                  <!-- Giriş (Tablet ve Üstü) -->
+                  <div class="ml-4 hidden md:block">
+                      <a href="#" class="text-gray-800 px-3 py-2 rounded-md text-sm font-medium">Log In</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+      <!-- Mobil Menü (Gizli) -->
+      <div class="md:hidden" id="mobile-menu">
+          <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+              <a href="#" class="block border-b border-gray-200 hover:bg-gray-100 px-3 py-2 rounded-md text-base font-medium text-gray-800">Home</a>
+              <a href="#" class="block border-b border-gray-200 hover:bg-gray-100 px-3 py-2 rounded-md text-base font-medium text-gray-800">About</a>
+              <a href="#" class="block border-b border-gray-200 hover:bg-gray-100 px-3 py-2 rounded-md text-base font-medium text-gray-800">Services</a>
+              <a href="#" class="block border-b border-gray-200 hover:bg-gray-100 px-3 py-2 rounded-md text-base font-medium text-gray-800">Contact</a>
+          </div>
+      </div>
+  </nav>
+
+    <!-- Başlık Bölümü -->
+    <section class="bg-gray-300 py-32">
+        <div class="container max-w-md mx-auto px-2 text-center">
+            <h1 class="text-5xl font-bold mb-4 tracking-tighter leading-none">Quisquam necessita vel <span class="text-purple-600">laborum</span> <span class="text-purple-400">doloribus</span>delectus</h1>
+          <p class="mt-4 text-gray-600 max-w-xl mx-auto">
+            Cupiditate minima voluptate temporibus quia? Architecto beatae esse ab amet vero eaque explicabo!
+          </p>
+          <div class="mt-8 flex justify-center space-x-4">
+            <a class="bg-purple-600 text-white px-6 py-3 rounded-md hover:bg-purple-700 transition duration-300" href="#">
+              Get started
+            </a>
+            <a class="bg-gray-600 text-white px-6 py-3 rounded-md hover:bg-gray-700 transition duration-300" href="#">
+              Learn more
+            </a>
+          </div>
         </div>
-    </header>
+      </section>
 
-    <main class="flex-grow">
-        <section class="bg-white p-6">
-            <div class="container">
-                <div class="flex flex-col items-center">
-                    <h1 class="text-4xl m-4">Welcome to Review Page</h1>
-                    <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis, provident.</p>
-                    <a href="#" class="bg-purple-400"></a>
-
-                <div class="flex m-4">
-                    <a href="#" class="bg-purple-400 text-white px-4 py-2 rounded hover:bg-purple-600">Get Started</a>
-                    <a href="#" class="bg-blue-400 text-white px-4 py-2 rounded hover:bg-blue-600">Learn More</a>
-                </div>
-                </div>
+    <!-- Müşteri Yorumları -->
+<section class="py-16">
+    <div class="container max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold tracking-tight text-gray-800 pb-24">
+        What our customers are saying about us
+      </h2>
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-x-36 gap-y-12">
+        <div class="max-w-sm mx-auto bg-white rounded-lg flex flex-col justify-between pb-0 pt-14 shadow-2xl">
+            <div class="flex justify-start">
+              <i class="fa-solid fa-quote-left fa-fade fa-2xl pl-6" style="color: #525252;"></i>
             </div>
-        </section>
-
-
-        <!-- Customer Reviews Section -->
-        <section class="bg-gray-100 py-8">
-            <div class="container mx-auto p-6">
-                <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">Customer Reviews</h2>
-                <div class="flex flex-wrap -mx-4">
-                    <div class="w-full md:w-1/2 lg:w-1/2 px-4 mb-8">
-                        <div class="bg-white rounded-lg shadow-lg p-6  max-w-md mx-auto">
-                            <p class="text-gray-600 mb-4">"This product has changed my life better. I recommend it to everyone!"</p>
-                            <p class="bg-green-100 font-semibold">- John Doe</p>
-                        </div>
-                    </div>
-                    <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
-                        <div class="bg-white rounded-lg shadow-lg p-6 max-w-md mx-auto">
-                            <p class="text-gray-600 mb-4">"Excellent customer service and a great product. Five stars!"</p>
-                            <p class="bg-green-100 font-semibold">- Jane Smith</p>
-                        </div>
-                    </div>
-                    <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
-                        <div class="bg-white rounded-lg shadow-lg p-6 max-w-md mx-auto">
-                            <p class="text-gray-600 mb-4">"I can't believe how much value I got for the price. Absolutely worth it."</p>
-                            <p class="bg-green-100 font-semibold">- Mark Johnson</p>
-                        </div>
-                    </div>
-                    <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
-                        <div class="bg-white rounded-lg shadow-lg p-6 max-w-md mx-auto">
-                            <p class="text-gray-600 mb-4">"The best investment I've ever made. This product delivers on its promises."</p>
-                            <p class="bg-green-100 font-semibold">- Emily Davis</p>
-                        </div>
-                    </div>
+            <blockquote class="italic font-semibold text-gray-600 mt-4 text-center px-14">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus quibusdam, eligendi exercitationem molestias possimus facere.
+            </blockquote>
+            <div class="flex justify-end mt-4">
+              <i class="fa-solid fa-quote-right fa-fade fa-2xl pr-6" style="color: #525252;"></i>
+            </div>
+            <div class="mt-6 bg-purple-600 text-white py-4 rounded-b-lg">
+              <div class="flex justify-center">
+                <div class="rounded-full bg-gray-200 p-2 flex items-center justify-center" style="margin-top: -2rem;">
+                  <i class="fa-solid fa-user fa-lg" style="color: #525252;"></i>
                 </div>
+              </div>
+              <h3 class="text-lg mt-4">Distinctio Animi</h3>
+              <p class="text-sm">Aliquam illum</p>
             </div>
-        </section>
-
-
-
-    </main>
-
-    <footer class="bg-gray-600 mt-auto">
-        <div class="container mx-auto px-4 py-4">
-            <div class="flex text-gray-200 justify-between items-center">
-                <p>&copy; 2024 Brand</p>
-                <a href="#" class="mx-2">Privacy Policy</a>
-                <a href="#" class="mx-2">Terms of Service</a>
+          </div>
+          
+          <div class="max-w-sm mx-auto bg-white rounded-lg flex flex-col justify-between pb-0 pt-14">
+            <div class="flex justify-start">
+              <i class="fa-solid fa-quote-left fa-fade fa-2xl pl-6" style="color: #525252;"></i>
             </div>
-        </div>
-    </footer>
-    
+            <blockquote class="italic font-semibold text-gray-600 mt-4 text-center px-14">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus quibusdam, eligendi exercitationem molestias possimus facere.
+            </blockquote>
+            <div class="flex justify-end mt-4">
+              <i class="fa-solid fa-quote-right fa-fade fa-2xl pr-6" style="color: #525252;"></i>
+            </div>
+            <div class="mt-6 bg-purple-600 text-white py-4 rounded-b-lg">
+              <div class="flex justify-center">
+                <div class="rounded-full bg-gray-200 p-2 flex items-center justify-center" style="margin-top: -2rem;">
+                  <i class="fa-solid fa-user fa-lg" style="color: #525252;"></i>
+                </div>
+              </div>
+              <h3 class="text-lg mt-4">Distinctio Animi</h3>
+              <p class="text-sm">Aliquam illum</p>
+            </div>
+          </div>
+
+        <div class="max-w-sm mx-auto bg-white rounded-lg flex flex-col justify-between pb-0 pt-14">
+            <div class="flex justify-start">
+              <i class="fa-solid fa-quote-left fa-fade fa-2xl pl-6" style="color: #525252;"></i>
+            </div>
+            <blockquote class="italic font-semibold text-gray-600 mt-4 text-center px-14">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus quibusdam, eligendi exercitationem molestias possimus facere.
+            </blockquote>
+            <div class="flex justify-end mt-4">
+              <i class="fa-solid fa-quote-right fa-fade fa-2xl pr-6" style="color: #525252;"></i>
+            </div>
+            <div class="mt-6 bg-purple-600 text-white py-4 rounded-b-lg">
+              <div class="flex justify-center">
+                <div class="rounded-full bg-gray-200 p-2 flex items-center justify-center" style="margin-top: -2rem;">
+                  <i class="fa-solid fa-user fa-lg" style="color: #525252;"></i>
+                </div>
+              </div>
+              <h3 class="text-lg mt-4">Distinctio Animi</h3>
+              <p class="text-sm">Aliquam illum</p>
+            </div>
+          </div>
+
+        <div class="max-w-sm mx-auto bg-white rounded-lg flex flex-col justify-between pb-0 pt-14">
+            <div class="flex justify-start">
+              <i class="fa-solid fa-quote-left fa-fade fa-2xl pl-6" style="color: #525252;"></i>
+            </div>
+            <blockquote class="italic font-semibold text-gray-600 mt-4 text-center px-14">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus quibusdam, eligendi exercitationem molestias possimus facere.
+            </blockquote>
+            <div class="flex justify-end mt-4">
+              <i class="fa-solid fa-quote-right fa-fade fa-2xl pr-6" style="color: #525252;"></i>
+            </div>
+            <div class="mt-6 bg-purple-600 text-white py-4 rounded-b-lg">
+              <div class="flex justify-center">
+                <div class="rounded-full bg-gray-200 p-2 flex items-center justify-center" style="margin-top: -2rem;">
+                  <i class="fa-solid fa-user fa-lg" style="color: #525252;"></i>
+                </div>
+              </div>
+              <h3 class="text-lg mt-4">Distinctio Animi</h3>
+              <p class="text-sm">Aliquam illum</p>
+            </div>
+          </div>
+
+          
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <div class="bg-gray-300 py-12">
+    <div class="container mx-auto px-6">
+      <div class="max-w-md mx-auto bg-white tracking-tighter shadow-md rounded-lg p-8">
+        <h2 class="text-2xl font-bold mb-6">Contact us</h2>
+        <form action="#" method="POST">
+          <div class="mb-4">
+            <label for="name" class="block text-sm font-medium text-gray-700"
+              >Name</label
+            >
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Your name"
+              class="mt-1 bg-gray-100 block w-full px-3 py-2 rounded-md shadow-sm focus:outline-none focus:border-purple-500 sm:text-sm"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block text-sm font-medium text-gray-700"
+              >Email</label
+            >
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Your email"
+              class="mt-1 bg-gray-100 block w-full px-3 py-2 rounded-md shadow-sm focus:outline-none focus:border-purple-500 sm:text-sm"
+            />
+          </div>
+          <div class="mb-6">
+            <label
+              for="message"
+              class="block text-sm font-medium text-gray-700"
+              >Message</label
+            >
+            <textarea
+              name="message"
+              id="message"
+              rows="2"
+              placeholder="Message..."
+              class="mt-1 bg-gray-100 block w-full px-3 py-2 rounded-md shadow-sm focus:outline-none focus:border-purple-500 sm:text-sm"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-purple-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
+          >
+            Send
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="py-6 bg-gray-300 px-24">
+    <div class="container font-semibold mx-auto px-6 flex justify-between items-center tracking-tighter">
+      <div>
+        <a class="text-gray-600 text-sm" href="#">Shop</a>
+        <a class="ml-4 text-gray-600 text-sm" href="#">About</a>
+        <a class="ml-4 text-gray-600 text-sm" href="#">Blog</a>
+        <a class="ml-4 text-gray-600 text-sm" href="#">Pricing</a>
+        <a class="ml-4 text-gray-600 text-sm" href="#">Contact</a>
+      </div>
+      <div class="flex items-center">
+        <a class="text-lg mr-4" href="#">
+          <div
+            class="bg-purple-700 rounded-full w-8 h-8 flex items-center justify-center"
+          >
+            <i class="fab fa-instagram text-white w-4 h-4"></i>
+          </div>
+        </a>
+        <a class="text-lg mr-4" href="#">
+          <div
+            class="bg-purple-700 rounded-full w-8 h-8 flex items-center justify-center"
+          >
+            <i class="fab fa-pinterest text-white w-4 h-4"></i>
+          </div>
+        </a>
+        <a class="text-lg mr-4" href="#">
+          <div
+            class="bg-purple-700 rounded-full w-8 h-8 flex items-center justify-center"
+          >
+            <i class="fab fa-twitter text-white w-4 h-4"></i>
+          </div>
+        </a>
+        <a class="text-lg mr-4" href="#">
+          <div
+            class="bg-purple-700 rounded-full w-8 h-8 flex items-center justify-center"
+          >
+            <i class="fab fa-facebook text-white w-4 h-4"></i>
+          </div>
+        </a>
+        <a class="text-lg" href="#">
+          <div
+            class="bg-purple-700 rounded-full w-8 h-8 flex items-center justify-center"
+          >
+            <i class="fab fa-google text-white w-4 h-4"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+  </footer>
+  
+
+  <script>
+    // Mobil Menü İşlevselliği
+    document.getElementById('mobile-menu-button').addEventListener('click', function () {
+        var mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
 </body>
 </html>
